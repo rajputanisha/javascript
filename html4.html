@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Html Class</title>
+<Style>
+    .test{
+        color:white;
+        font-family:chiller;
+        font-size: 50px;
+        height: 100px;
+        width: 120px;
+        position:relative;
+        animation: race 5s;
+        animation-fill-mode: forwards;
+    }
+ 
+    #img1 {animation-timing-function: linear;}
+    #img2 {animation-timing-function:  ease;}
+    #img3 {animation-timing-function:  ease-in;}
+    #img4 {animation-timing-function: ease-out;}
+    #img5 {animation-timing-function: ease-in-out;}
+    @keyframes race
+    {
+       from {left: 0px;}
+       to{left:300px}
+    }
+   
+</Style>
+<script>
+ 
+</script>
+<meta/>
+<link/>
+<base/>
+</head>
+<body>
+    <div id="img1" class="test">
+  <img src="ball.jpeg"/>
+</div>
+<div id="img2" class="test">
+  <img src="car1.jpeg" />
+  </div>
+  <div id="img3" class="test">
+  <img src="car2.jpg" class="test" />
+  </div>
+  <div id="img4" class="test">
+  <img src="car3.jpeg"  class="test"/>
+  </div>
+  <div id="img5" class="test">
+  <img src="car1.jpeg" class="text" />
+</div>
+</body>
+</html>
