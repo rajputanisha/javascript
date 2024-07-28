@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <div id="parent">
+  <div class="day">Monday</div>
+  <div class="day">Tuesday</div>
+  <div class="day">Wednesday</div>
+</div>
+
+  <script>
+    const parent = document.querySelector('.day');
+    // console.log(dayOne); // 
+    console.log(parent.children[1].innerHTML)
+  </script>
+</body>
+</html>
+
+<!-- The line const dayOne = document.querySelector('.day') in JavaScript is used to select the first element in the document with the class name day and assign it to the variable dayOne. Here's a breakdown of what each part does:
+
+const dayOne: This declares a constant variable named dayOne.
+
+document.querySelector('.day'): This method is used to select the first element in the DOM that matches the specified CSS selector. In this case, '.day' is a CSS class selector. The method returns the first element in the document with the class day. -->

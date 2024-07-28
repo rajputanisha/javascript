@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+#btn{
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  height: 20px;
+  width: 70px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: aquamarine;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-behavior: 1s;
+}
+#btn:hover{
+  height: 25px;;
+  width: 80px;
+  border: 1px solid red;
+  
+}
+#btn:active{
+  height: 23px;
+  width: 80px;
+  border: 1px solid aqua;
+  background-color:indianred;
+  transform: scale(4,7);
+
+}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="btn">
+      <button>click here</button>
+    </div>
+    
+  </div>
+</body>
+</html>

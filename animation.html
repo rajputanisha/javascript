@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog and Car Animation</title>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.dog, .car {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: auto;
+}
+
+.dog {
+  animation: moveDog 10s linear infinite;
+}
+
+.car {
+  animation: moveCar 10s linear infinite;
+  animation-delay: 3s; /* Car starts moving 3 seconds after the dog */
+}
+
+@keyframes moveDog {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: calc(100% + 100px);
+  }
+}
+
+@keyframes moveCar {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: calc(100% + 100px);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <img src="dog.jpeg" alt="Dog" class="dog">
+    <img src="car.jpeg" alt="Car" class="car">
+  </div>
+</body>
+</html>

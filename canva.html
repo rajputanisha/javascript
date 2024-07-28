@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: 2px solid black;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    const canvas = document.querySelector('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const c = canvas.getContext('2d');
+    c.fillStyle = "red";
+    c.fillRect(100,100,100,100);
+    //line
+    c.beginPath();
+    c.moveTo(100,170);
+    c.lineTo(150,200)
+    c.stroke();
+    c.beginPath();
+    c.arc(300,300,30,0,Math.PI*2,false)
+    c.stroke();
+    for(let i =0;i<15;i++){
+      var x = Math.random()*window.innerWidth;
+      var y = Math.random()*window.innerHeight;
+      c.beginPath();
+      c.arc(x,y,30,0,Math.PI*2,false)
+      c.strokeStyle = 'green'
+      c.stroke();
+    }
+    c.closePath(); // Close the canvas context
+  </script>
+</body>
+</html>
+
+
+

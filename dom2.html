@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black; color: aqua;" >
+  <div class="parent">
+    <div class="day">monday</div>
+    <div class="day">tuesday</div>
+    <div class="day">wednesday</div>
+    <div class="day">thursaday</div>
+  </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent')
+  console.log(parent);
+  console.log(parent.children);
+  console.log(parent.children[1].innerHTML);
+  //this pretn  tuesday
+  console.log(parent.children[1]);
+  // this print  div class = "day">tuesday </div> like this 
+for(let i = 0;i<parent.children.lenght;i++){
+  console.log(parent.children[i].innerHTML);
+}
+// Assuming 'parent' is defined somewhere correctly
+
+// Correcting the loop condition with 'length' instead of 'lenght'
+for (let i = 0; i < parent.children.length; i++) {
+  // Logging the outerHTML to include the div tags
+  console.log(parent.children[i].innerHTML);
+
+}
+// parent.children[1].style.color = "orange";
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+ const all = document.querySelector('.day');
+ console.log(all)
+ console.log(all.parentElement)
+ console.log(all.nextElementSibling)
+ console.log("NODES",parent.childNodes);
+ //we are discusign about these nodes 
+
+
+
+
+
+</script>
+</html>
