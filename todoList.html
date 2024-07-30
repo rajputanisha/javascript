@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .list-item{
+    cursor: pointer;
+    width: min-content;
+
+  }
+  .list-item:hover{
+    color: red;
+    text-decoration: line-through;
+  }
+  </style>
+</head>
+<body>
+  <div id="list">
+    <!-- <div class="list-item">wash dishes</div> -->
+
+  </div>
+  <form id ="new-item-form">
+    <label for="item-input">new item</label>
+    <input type="text" id = "item-input">
+    <button type= "submit"> Add item</button>
+  </form>
+</body>
+<script>
+  // select all eleements
+  const form = document.querySelector('#new-item-form')
+  const list = document.querySelector('#list')
+  const input = document.querySelector('#item-input');
+  // done first thing to select all elemtns
+  // 2. when i submit the form add new eleents     
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(input.value);
+    //1 crete a new item 
+    const item = document.createElement('div');
+    item.innerHTML = input.value
+    item.classList.add("list-item");
+    console.log(item)
+    // 2 add thatin to list
+    list.appendChild(item);
+    //  3 clear input 
+     input.value = "";
+    //  4 setupt evet listner to dleted the itme when clicked
+    item.addEventListener('click',() =>{
+      list.removeChild(item);
+    })
+
+  })
+
+</script>
+</html>

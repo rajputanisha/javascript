@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button data-click="3">3</button>
+  <button data-click="1">1</button>
+  <button data-click="2">2</button>
+</body>
+<script>
+  // Use querySelectorAll to select all buttons, not just the first one
+  const buttons = document.querySelectorAll("button");
+
+  // Use forEach to iterate over the buttons
+  buttons.forEach(button => {
+    // Add an event listener to each button
+    button.addEventListener('click', () => {
+      // Get the current click count from the data attribute
+      const current = parseInt(button.dataset.click);
+      // Increment the click count and update the data attribute
+      button.dataset.click = current + 1;
+      // Update the button text to show the new click count
+      // button.textContent = button.dataset.click;
+    });
+  });
+</script>
+</html>
+//******
+how man time a button click this show by data set 
+
+**//
